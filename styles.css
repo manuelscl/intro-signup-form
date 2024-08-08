@@ -1,3 +1,15 @@
+:root {
+    --color-primary-red: hsl(0, 100%, 74%);
+    --color-primary-green: hsl(154, 59%, 51%);
+    --color-accent-blue: hsl(248, 32%, 49%);
+    --color-neutral-dark-blue: hsl(249, 10%, 26%);
+    --color-neutral-light-gray: hsl(0, 0%, 94%, 1);
+    --border-color-light-gray: hsl(0, 0%, 87%, 1);
+    --color-neutral-grayish-blue: hsl(246, 25%, 77%);
+    --color-white: hsl(0, 0%, 100%);
+  }
+  
+
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +17,123 @@
     font-family: "Poppins", sans-serif;
 }
 
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: url("./images/bg-intro-mobile.png");
+    background-color: var(--color-primary-red);
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+p {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.intro {
+    margin: 7rem 0 6rem;
+}
+
+.intro__title {
+    font-size: 2.6rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--color-white);
+}
+
+.intro__description {
+    line-height: 2.5rem;
+    color: var(--color-neutral-light-gray);
+    font-weight: 500;
+}
+
+.signup__offer {
+    color: var(--color-neutral-light-gray);
+    background: var(--color-accent-blue);
+    border-radius: 1rem;
+    padding: 1.8rem 1.5rem;
+}
+
+.signup__offer strong {
+    font-weight: 600;
+    color: var(--color-white);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white);
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+    padding: 2.5rem;
+    gap: 1.8rem;
+}
+
+.form__group {
+    position: relative;
+}
+
+.form__input {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: rgb(42, 42, 42);
+    padding: 1.6rem;
+    border: 1.6px solid var(--border-color-light-gray);
+    border-radius: 0.6rem;
+    letter-spacing: 0.3px;
+}
+
+.form__input::placeholder {
+    font-weight: 700;
+}
+
+.form__input:focus {
+    outline-color: var(--color-neutral-grayish-blue);
+}
+
+.form__error-icon {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.4rem;
+    opacity: 0;
+    transition: 160ms ease-in-out all;
+}
+
+.form__btn {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-white);
+    background: var(--color-primary-green);
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    padding: 1.6rem 1.5rem;
+    border: none;
+    border-bottom: 0.4rem solid hsl(154, 55%, 45%);
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: 160ms ease-in-out;
+}
+
+.form__btn:hover {
+    background: hsl(154, 68%, 55%);
+    border-color: hsl(154, 57%, 51%);
+}
+
+.form__terms-conditions {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-neutral-grayish-blue);
+}
+
+.form__terms-conditions a {
+    font-weight: 700;
+    color: var(--color-primary-red);
+    text-decoration: none;
+}
 /* Form Validation Styles */
 
 /* Media Queries */
