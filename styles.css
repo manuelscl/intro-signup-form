@@ -33,6 +33,11 @@ p {
     text-align: center;
 }
 
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+
 .intro {
     margin: 7rem 0 6rem;
 }
@@ -55,6 +60,7 @@ p {
     background: var(--color-accent-blue);
     border-radius: 1rem;
     padding: 1.8rem 1.5rem;
+    box-shadow: 0 7px 0 0 rgba(7, 1, 28, 0.151);
 }
 
 .signup__offer strong {
@@ -92,7 +98,9 @@ p {
 }
 
 .form__input:focus {
-    outline-color: var(--color-neutral-grayish-blue);
+    outline: none;
+    border: 1.6px solid var(--color-neutral-grayish-blue);
+    caret-color: var(--color-accent-blue);
 }
 
 .form__error-icon {
@@ -134,6 +142,72 @@ p {
     color: var(--color-primary-red);
     text-decoration: none;
 }
-/* Form Validation Styles */
 
+/* Form Validation Styles */
+.form__group-incorrect .form__input {
+    border: 2px solid var(--color-primary-red);
+}
+
+.form__group-incorrect .form__error-icon {
+    opacity: 1;
+}
 /* Media Queries */
+@media screen and (min-width: 481px) {
+    br {
+        display: none;
+    }
+    
+    .intro__title {
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        display: grid;
+        place-content: center;
+    }
+    
+    .main-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        gap: 40px;
+    }
+
+    .intro {
+        width: 45%;
+    }
+
+    .intro__title {
+        font-size: 3.4rem;
+        text-align: start;
+        width: 100%;
+    }
+
+    .intro__description {
+        text-align: start;
+        width: 95%;
+    }
+
+    .signup {
+        width: 55%;
+    }
+
+    .form {
+        max-width: 550px;
+    }
+
+    .form__input {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .intro__title {
+        font-size: 4.4rem;
+    }
+}
