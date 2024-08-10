@@ -28,32 +28,46 @@
       <form class="form" id="form">
         <!-- Group: Name -->
         <div class="form__group" id="group__name">
-          <input type="text" name="name" id="name" class="form__input" placeholder="First Name">
-          <img src="./images/icon-error.svg" alt="icon-error" class="form__error-icon">
+          <div class="form__group-input">
+            <input type="text" name="name" id="name" class="form__input" placeholder="First Name">
+            <img src="./images/icon-error.svg" alt="icon-error" class="form__error-icon" draggable="false">
+            <p class="form__input-error">The name must be between 3 and 16 characters long and can only contain letters.</p>
+          </div>
         </div>
 
         <!-- Group: Last Name -->
         <div class="form__group" id="group__lastname">
-          <input type="text" name="lastname" id="lastname" class="form__input" placeholder="Last Name">
-          <img src="./images/icon-error.svg" alt="icon-error" class="form__error-icon">
+          <div class="form__group-input">
+            <input type="text" name="lastname" id="lastname" class="form__input" placeholder="Last Name">
+            <img src="./images/icon-error.svg" alt="icon-error" class="form__error-icon" draggable="false">
+            <p class="form__input-error">The last name must be between 3 and 16 characters long and can only contain letters.</p>
+          </div>
         </div>
 
         <!-- Group: Email -->
         <div class="form__group" id="group__email">
-          <input type="email" name="email" id="email" class="form__input" placeholder="Email Address">
-          <img src="./images/icon-error.svg" alt="icon-error" class="form__error-icon">
+          <div class="form__group-input">
+            <input type="email" name="email" id="email" class="form__input" placeholder="Email Address">
+            <img src="./images/icon-error.svg" alt="icon-error" class="form__error-icon" draggable="false">
+            <p class="form__input-error">Looks like this is not an email.</p>
+          </div>
         </div>
 
         <!-- Group: Password -->
         <div class="form__group" id="group__password">
-          <input type="password" name="password" id="password" class="form__input" placeholder="Password">
-          <img src="./images/icon-error.svg" alt="icon-error" class="form__error-icon">
+          <div class="form__group-input">
+            <input type="password" name="password" id="password" class="form__input" placeholder="Password">
+            <img src="./images/icon-error.svg" alt="icon-error" class="form__error-icon" draggable="false">
+            <p class="form__input-error">The password must be between 4 and 12 characters long.</p>
+          </div>
         </div>
 
         <button type="submit" class="form__btn">Claim your free trial</button>
         <p class="form__terms-conditions">By clicking the button, you are agreeing to our <a href="#" target="_blank">Terms and Services</a></p>
       </form>
     </div>
-  </main> 
+  </main>
+  
+  <script src="./form.js"></script>
 </body>
 </html>

@@ -28,6 +28,11 @@ body {
     padding: 2rem;
 }
 
+a:focus, a:focus-visible {
+    outline: 1.6px solid var(--color-accent-blue);
+    border-radius: 0.2rem;
+}
+
 p {
     font-size: 1.6rem;
     text-align: center;
@@ -78,7 +83,7 @@ p {
     gap: 1.8rem;
 }
 
-.form__group {
+.form__group-input {
     position: relative;
 }
 
@@ -105,10 +110,11 @@ p {
 
 .form__error-icon {
     position: absolute;
-    top: 1.5rem;
+    top: 1.7rem;
     right: 1.4rem;
     opacity: 0;
     transition: 160ms ease-in-out all;
+    user-select: none;
 }
 
 .form__btn {
@@ -131,6 +137,20 @@ p {
     border-color: hsl(154, 57%, 51%);
 }
 
+.form__btn:focus {
+    outline: 1.6px solid var(--color-accent-blue);
+}
+
+.form__input-error {
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-style: italic;
+    text-align: right;
+    color: var(--color-primary-red);
+    margin-top: 6px;
+    display: none;
+}
+
 .form__terms-conditions {
     font-size: 1.2rem;
     font-weight: 500;
@@ -144,12 +164,20 @@ p {
 }
 
 /* Form Validation Styles */
+.form__group-correct .form__input {
+    border: 2px solid var(--color-primary-green);
+}
+
 .form__group-incorrect .form__input {
     border: 2px solid var(--color-primary-red);
 }
 
 .form__group-incorrect .form__error-icon {
     opacity: 1;
+}
+
+.form__group-incorrect .form__input-error-active {
+    display: block;
 }
 /* Media Queries */
 @media screen and (min-width: 481px) {
