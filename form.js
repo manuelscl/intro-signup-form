@@ -79,9 +79,14 @@ formElement.addEventListener("submit", (e) => {
         document.querySelectorAll(".form__group").forEach((element) => {
             element.classList.remove("form__group-correct");
         });
+
+        fieldValidity.name = false;
+        fieldValidity.lastname = false;
+        fieldValidity.email = false;
+        fieldValidity.password = false;
+        
         alert("The form has been successfully submitted.");
     } else {
         alert("The form is not complete.");
     }
 });
-console.log(allFieldsValid);
